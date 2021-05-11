@@ -1,1 +1,1 @@
-web: gunicorn project_2020.wsgi --log-file -pip install psycopg2-binary
+web: gunicorn project_2020.wsgi --log-file -

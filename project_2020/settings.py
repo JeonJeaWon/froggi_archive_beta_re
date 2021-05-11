@@ -27,8 +27,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','9^-*e-tkbg-mdcl$dz#&=m8_xjok#*f
 #DEBUG = True 배포요,,
 DEBUG = bool(os.environ.get('DJANGO_DEBUG',True))
 
-ALLOWED_HOSTS = []
-#ALLOWED_HOSTS = ['*'] 배포관련
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,7 +76,7 @@ TEMPLATES = [
 ]
 
 #WSGIAPPTICATION
-#WSGIAPPLICATION = 'project_2020.wsgi.application' 배포시 주석 해제
+WSGIAPPLICATION = 'project_2020.wsgi.application'
 
 
 # Database
@@ -90,9 +90,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
