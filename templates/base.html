@@ -43,7 +43,7 @@
                 <!--li class="log_menu"><a href="#">MyPage</a></li-->
                 <li class="log_menu"><a href="javascript:{document.getElementById('logout').submit()}">
                         LogOut</a>
-                    <form id="logout" method="POST" action="{% url 'account_logout' %}">
+                    <form id="logout" method="POST" action="{% url 'logout' %}">
                         {% csrf_token %}
                         <input type="hidden">
                     </form>
